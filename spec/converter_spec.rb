@@ -5,6 +5,10 @@ describe '#convert' do
     expect(convert(0)).to eq('')
   end
 
+  it 'should convert 1 to I' do
+    expect(convert(1)).to eq("I")
+  end
+
 end
 
 
