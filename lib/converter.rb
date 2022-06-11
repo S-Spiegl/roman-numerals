@@ -7,20 +7,21 @@ class RomanNumerals
   end
   
   def convert(number)
-    if number == 0 
+    case number
+      when 0 
       @string << ""
-    elsif number.between?(1, 3)
+      when 1..3
       @string << "I" * number
-    elsif number == 4
+      when 4
       @string << "IV"
-    elsif number == 5
+      when 5
       @string << "V"
-    elsif number.between?(6, 8)
+      when 6..8
       @string << "V" 
       (number-5).times {@string << "I"}
-    elsif number == 9
+      when 9
       string << "IX"
-    elsif number == 10
+      when 10
       string << "X"
     end
     return @string
