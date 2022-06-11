@@ -24,8 +24,27 @@ describe '#convert' do
   it 'should convert 5 to V' do
     expect(convert(5)).to eq("V")
   end 
+
+  it 'should convert 6 to VI' do
+    expect(convert(6)).to eq("VI")
+  end 
   
+  it 'should convert 7 to VII' do
+    expect(convert(7)).to eq("VII")
+  end 
+
+  it 'should convert 8 to VIII' do
+    expect(convert(8)).to eq("VIII")
+  end 
   
+  it 'should convert 9 to IX' do
+    expect(convert(9)).to eq("IX")
+  end 
+
+  it 'should convert 10 to X' do
+    expect(convert(10)).to eq("X")
+  end 
+
 
 end
 
