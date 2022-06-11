@@ -1,7 +1,7 @@
 def convert(number)
   if number == 0 
     return ""
-  elsif number == 1
-    return "I"
+  elsif number.between?(1, 3)
+    return "I" * number
   end
 end
