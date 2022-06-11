@@ -1,27 +1,31 @@
 class RomanNumerals
+  
+  attr_reader :string
+  
+  def initialize
+    @string = ""
+  end
+  
   def convert(number)
     if number == 0 
-      return ""
+      @string << ""
     elsif number.between?(1, 3)
-      return "I" * number
+      @string << "I" * number
     elsif number == 4
-      return "IV"
+      @string << "IV"
     elsif number == 5
-      return "V"
-    elsif number == 6
-      return "VI"
-    elsif number == 7
-      return "VII"
-    elsif number == 8
-      return "VIII"
+      @string << "V"
+    elsif number.between?(6, 8)
+      @string << "V" 
+      (number-5).times {@string << "I"}
     elsif number == 9
-      return "IX"
+      string << "IX"
     elsif number == 10
-      return "X"
+      string << "X"
     end
+    return @string
   end
 end
 
-# elsif number.between?(6, 8)
-#   string.push "V" 
-#   (number-5).times{string.push "I"}
+# if you were going higher you could have rules for multiples of 5 (that don't include ten)
+#multiples of ten... seems messy still... 
