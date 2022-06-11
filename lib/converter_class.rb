@@ -1,5 +1,5 @@
 class Converter
-  def convert
-    "I"
+  def convert(num)
+    num == 1 ? "I" : "II"
   end
 end
